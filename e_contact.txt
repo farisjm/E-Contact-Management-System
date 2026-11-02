@@ -1,0 +1,30 @@
+CREATE DATABASE e_contact;
+
+USE e_contact;
+
+CREATE TABLE Contact (
+    ContactID INT AUTO_INCREMENT PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    ContactNo VARCHAR(15),
+    Address VARCHAR(255),
+    Gender VARCHAR(10)
+);
+
+INSERT INTO Contact (FirstName,LastName,ContactNo,Address,Gender)
+VALUES
+('John','Smith','0771234567','Colombo','Male'),
+('Sarah','Perera','0712345678','Kandy','Female'),
+('David','Fernando','0761234567','Galle','Male'),
+('Nimal','Silva','0751234567','Matara','Male'),
+ ('Amali','Kumari','0781234567','Kurunalaga','Female'),
+ ('Kamal','Jayasinghe','0721234567','Negambo','Male'),
+ ('Tharushi','Peris','0701234567','Kandy','Female');
+ 
+ CREATE DATABASE EContactDB;
+
+RENAME TABLE e_contact.Contact TO EContactDB.Contact;
+
+DROP DATABASE e_contact;
+
+USE EContactDB;
